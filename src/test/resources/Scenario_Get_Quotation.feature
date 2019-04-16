@@ -12,7 +12,7 @@ Feature: D3D Quote Scenarios
     Given I entered message as "Hello Quote"
     Given I entered captcha code as per shown on the page as "12345"
     When  I click send message button
-#    Then I should see a pop up box with message " "
+     Then I should see a pop up box with message " "
 
 
   @regression @smoke
