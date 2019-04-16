@@ -16,7 +16,7 @@ public class Create_Accout_SD extends DriverClass {
 
     public Create_Account_Page c_page = PageFactory.initElements(driver,Create_Account_Page.class);
 
-
+ // Test
     @Given("^I click onto singin button onto home page$")
     public void iClickOntoSinginButtonOntoHomePage() {
         c_page.ClickSignButon();
