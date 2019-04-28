@@ -87,4 +87,47 @@ public class Contact_us_SD extends DriverClass {
             assertEquals(expected_message,actual_message);
         }
     }
+
+    @Then("^I should see partial url contains \"([^\"]*)\"$")
+    public void iShouldSeePartialUrlContains(String PartialURL){
+         String actualURL= driver.getCurrentUrl();
+         Assert.assertTrue(actualURL.contains(PartialURL));
+    }
+
+    @And("^I should not see signout button$")
+    public void iShouldNotSeeSignoutButton() {
+       int SignOutButton = driver.findElements(By.linkText("Sign Out")).size();
+        Assert.assertEquals(0,SignOutButton );
+    }
+
+    @And("^I should see sign in button$")
+    public void iShouldSeeSignInButton() {
+        boolean ButtonDisplay = driver.findElement(By.linkText("Sign in")).isDisplayed();
+        Assert.assertTrue(ButtonDisplay);
+    }
+
+    @And("^I should see contact us buton$")
+    public void iShouldSeeContactUsButon() {
+        boolean ButtonDisplay = driver.findElement(By.id("contact-link")).isDisplayed();
+        Assert.assertTrue(ButtonDisplay);
+    }
+
+    @When("^I click browser back button$")
+    public void iClickBrowserBackButton() {
+        driver.navigate().back();
+    }
+
+    @Then("^I should not see error message as \"([^\"]*)\"$")
+    public void iShouldNotSeeErrorMessageAs(String ExpecedErroeMessage) {
+        int ErrorMesageDisplay = driver.findElements(By.xpath("//*[@id=\"center_column\"]/div")).size();
+        Assert.assertEquals(0,ErrorMesageDisplay);
+
+    }
+
+    @When("^I click browser forward button$")
+    public void iClickBrowserForwardButton() {
+        driver.navigate().forward();
+    }
+
+
 }

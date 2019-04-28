@@ -19,9 +19,19 @@ public class DriverClass {
             driver = new EdgeDriver();
         }
 
-        driver.get("http://www.automationpractice.com");
+//        driver.get("http://www.automationpractice.com");
+        driver.get("https://www.gov.uk/government/organisations/driver-and-vehicle-licensing-agency");
         driver.manage().window().maximize();
      }
+
+     String env =   System.getProperty("env");
+
+    String path = System.getProperty("user.dir");
+
+
+    {
+        String dir = path + "/src/test/java/com/stepDefinitions/propertyFiles/environment_qa.properties";
+    }
 
     public void closeBrowser() {
 //        driver.close();
