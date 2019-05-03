@@ -9,13 +9,4 @@ public class Contact_us_Page extends DriverClass {
         driver.findElement(By.linkText("Contact us")).click();
     }
 
-
-
-
-
-
-
-
-
-
 }

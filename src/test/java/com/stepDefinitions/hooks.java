@@ -18,7 +18,7 @@ public class hooks {
     @After
 
     public void browserClose(){
-        driverC.closeBrowser();
+//        driverC.closeBrowser();
     }
 }
 
